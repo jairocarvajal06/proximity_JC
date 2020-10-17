@@ -5,6 +5,7 @@
 //AUTHOR: JAIRO CARVAJAL
 //October 17 , 2020
 //Read the data from the request
+
 if(isset($_GET['key_Word']))
 {
     $key_Word= filter_var($_GET['key_Word'], FILTER_SANITIZE_STRING);
