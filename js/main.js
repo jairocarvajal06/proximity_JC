@@ -19,12 +19,11 @@ async function getResults() {
        if (response != "") {
            var result = "";
            for (let i = 0; i < response.length; i++) {
-               result += `<tr>
+            result += `<tr>
                        
             <td>${response[i].name}</td>
             <td>${response[i].city}</td>
             <td>${response[i].state}</td>`;
-
 
            }
 
@@ -33,8 +32,6 @@ async function getResults() {
            alert("Key Word Not Found, try again!");//IF DOES NOT EXIST SHOW A MESSAGE
        }
        
-        
-
 
     }).catch((response) => {
 

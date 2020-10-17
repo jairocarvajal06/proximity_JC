@@ -30,11 +30,7 @@ if(isset($_GET['key_Word']))
 
                 array_push($arrayResult,$result);
             }
-            
-          
         }
-       
-        
     }
 
     header('Content-Type: application/json');
