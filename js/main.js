@@ -11,7 +11,7 @@ async function getResults() {
     });
 
     //SEND THE DATA TO THE PHP FILE TO PROCESS 
-    let url = './api.php'
+    let url = './API.php'
     requestHandler('get', url ,true, params)
     .then((response) => {
 
