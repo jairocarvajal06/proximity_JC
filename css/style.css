@@ -1,0 +1,10 @@
+.main_Container {
+    border: 2px solid;
+    padding: 20px;
+    border-color: #27a69a;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
