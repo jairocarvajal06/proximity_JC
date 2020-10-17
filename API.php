@@ -8,6 +8,7 @@
 
 if(isset($_GET['key_Word']))
 {
+    
     $key_Word= filter_var($_GET['key_Word'], FILTER_SANITIZE_STRING);
 
     //Load the file and read it
