@@ -11,7 +11,7 @@ async function getResults() {
     });
 
     //SEND THE DATA TO THE PHP FILE TO PROCESS 
-    let url = './API.php'
+    let url = './api.php'
     requestHandler('get', url ,true, params)
     .then((response) => {
 
@@ -30,6 +30,7 @@ async function getResults() {
            $("#table_Result").html(result);
        }else{
            alert("Key Word Not Found, try again!");//IF DOES NOT EXIST SHOW A MESSAGE
+           $("#table_Result").html("");
        }
        
 
