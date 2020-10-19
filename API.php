@@ -15,29 +15,33 @@ if(isset($_GET['key_Word']))
     $fileJson = file_get_contents("keyword.json");
     $jsonResult = json_decode($fileJson, true);
     $arrayResult = array();
-    for($i = 0 ;$i< count($jsonResult);$i++) {
+    for($i = 0 ;$i < count($jsonResult);$i++) {
 
-        for ($j=0; $j < count($jsonResult[$i]); $i++) { 
+        for ($j=0; $j < count($jsonResult[$i]); $j++) { 
         
-            $yes = array_search($key_Word,$jsonResult[$i]);
+            $yes = array_search($key_Word,$jsonResult[$j]);
 
             if($yes != "")
             {
                 $result = array(
                     
-                    'name' =>$jsonResult[$i]['name'],
-                    'city' =>$jsonResult[$i]['city'],
-                    'state' =>$jsonResult[$i]['state'],
+                    'name' =>$jsonResult[$j]['name'],
+                    'city' =>$jsonResult[$j]['city'],
+                    'state' =>$jsonResult[$j]['state'],
                 );
 
                 array_push($arrayResult,$result);
             }
+
+           
         }
+
+        header('Content-Type: application/json');
+        echo json_encode($arrayResult);
+        die;
     }
 
-    header('Content-Type: application/json');
-    echo json_encode($arrayResult);
-    die;
+    
    
 }
 
