@@ -34,7 +34,7 @@ if(isset($_GET['key_Word']))
     foreach ($jsonResult as $value)
     {
         
-            //$yes =  array_search(strtolower($key_Word), array_map('strtolower', $value));
+           
             $yes = array_find($key_Word, $value); // returns - key is - 0 
             if($yes!="")
             {
