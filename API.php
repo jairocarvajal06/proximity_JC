@@ -20,7 +20,7 @@ if(isset($_GET['key_Word']))
     //FUNCTION TO RETURN THE RESULTS IF THEY MATCH WITH THE KEY WORD
     function array_find($needle, array $haystack, $column = null) {
 
-            foreach ($haystack as $key => $value) { // for normal array
+            foreach ($haystack as $key => $value) { 
                 if (strpos(strtolower($value), strtolower($needle)) !== false) {
                     return $key;
                 }
